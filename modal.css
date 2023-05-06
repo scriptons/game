@@ -291,12 +291,9 @@ input[data-error]::after {
 
 .thanks {
   display: none;
-  position: absolute;
-  top: 44%;
-  left: 21%;
   font-size: 1.54rem;
   text-align: center;
-  width: 296px;
+  margin: 50% 0;
 }
 .btn-submit,
 .btn-signup,
@@ -534,10 +531,6 @@ footer {
     display: block;
     text-align: left;
   }
-
-  .content {
-    top: 4%;
-  }
 }
 
 @media screen and (max-width: 540px) {
@@ -575,10 +568,6 @@ footer {
     font-size: 0.6em;
     max-width: 344px;
     margin-left: -20px;
-  }
-
-  .content {
-    top: 2%;
   }
 }
 

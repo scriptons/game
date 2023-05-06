@@ -15,8 +15,29 @@ const formData = document.querySelectorAll(".formData");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
+//////////////////////////////////////////////
+///////////////  DEBUG  //////////////////////
+// fill field for tests
+/*
+const test = () => {
+  const firstName = document.getElementById("first");
+  const lastName = document.getElementById("last");
+  const email = document.getElementById("email");
+  const birthDate = document.getElementById("birthdate");
+  const numberContests = document.getElementById("quantity");
+  const location = (document.getElementById("location6").checked = true);
+
+  firstName.value = "Je";
+  lastName.value = "suis";
+  email.value = "test@test.test";
+  birthDate.value = "2000-01-01";
+  numberContests.value = "10";
+};
+*/
+
 // launch modal form
 function launchModal() {
+  test();
   modalbg.style.display = "block";
 }
 
@@ -269,15 +290,17 @@ form.addEventListener("submit", (event) => {
 });
 
 const submitForm = () => {
-  form.style.opacity = 0;
-  document.querySelector(".btn-submit").style.display = "none";
+  form.style.display = "none";
+  //document.querySelector(".btn-submit").style.display = "none";
 
-  const closeBtn = document.querySelector(".thanks");
+  const message = document.querySelector(".thanks");
+  message.style.display = "block";
+
+  const closeBtn = document.querySelector(".btn-close");
   closeBtn.style.display = "block";
+  closeBtn.addEventListener("click", () => form.submit());
 
-  const submit = document.querySelector(".btn-close");
-  submit.style.display = "block";
-  submit.addEventListener("click", (event) => form.submit());
+  const content = document.querySelector(".content");
 };
 
 const validate = () => {
