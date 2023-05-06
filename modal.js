@@ -37,7 +37,6 @@ const test = () => {
 
 // launch modal form
 function launchModal() {
-  test();
   modalbg.style.display = "block";
 }
 
